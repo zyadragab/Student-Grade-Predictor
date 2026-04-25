@@ -34,21 +34,24 @@ This project trains and compares 4 regression models on the Student Performance 
 
 ## 📓 Notebook
 
-The full training and analysis notebook is available in ML Project For UNI.ipynb — includes EDA, preprocessing, model training, evaluation, and comparison for all 4 models.
+The full training and analysis notebook is available in `ML Project For UNI.ipynb` — includes EDA, preprocessing, model training, evaluation, and comparison for all 4 models.
 
 ---
 
 ## 🚀 Run Locally
 
+```bash
 git clone https://github.com/zyadragab/Student-Grade-Predictor
 cd Student-Grade-Predictor
 pip install -r requirements.txt
 streamlit run app.py
+```
 
 ---
 
 ## 📁 Project Structure
 
+```
 ├── app.py                       # Main Streamlit app
 ├── ML Project For UNI.ipynb     # Full training notebook
 ├── requirements.txt             # Dependencies
@@ -60,3 +63,4 @@ streamlit run app.py
 │   ├── xgb.pkl
 │   └── scaler.pkl
 └── README.md
+```
