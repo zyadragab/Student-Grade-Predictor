@@ -1,64 +1,62 @@
-# 🎓 Student Grade Predictor — Streamlit App
+# 🎓 Student Grade Predictor
 
-## Files
-```
-app.py              ← الـ app الرئيسي
-requirements.txt    ← الـ libraries المطلوبة
-student_data.csv    ← داتاك (حطها في نفس الفولدر)
-```
+A machine learning web app that predicts students' final grades (G3) using 4 different ML models — built with Python and deployed with Streamlit.
+
+🔗 **Live Demo:** [student-grade-predictor-9icckmcpwrlkhxufugxfri.streamlit.app](https://student-grade-predictor-9icckmcpwrlkhxufugxfri.streamlit.app/)
 
 ---
 
-## 🚀 تشغيل محلياً (على جهازك)
+## 📌 Overview
 
-```bash
-# 1. install المكتبات
+This project trains and compares 4 regression models on the Student Performance Dataset to predict the final grade G3 based on student demographics, study habits, and social factors.
+
+---
+
+## 🤖 Models
+
+| Model | Description |
+|-------|-------------|
+| Linear Regression | Baseline model — fast and interpretable |
+| Random Forest | Ensemble of 200 decision trees |
+| SVR | Support Vector Regressor with RBF kernel |
+| XGBoost | Gradient boosting — focuses on correcting residual errors |
+
+---
+
+## 📊 App Pages
+
+- **🏠 Overview** — Dataset summary and model descriptions
+- **📊 Model Comparison** — RMSE, MAE, R² comparison across all 4 models
+- **🔮 Predict Grade** — Input student features and get instant predictions
+- **📈 Feature Importance** — Top features for Random Forest and XGBoost
+
+---
+
+## 📓 Notebook
+
+The full training and analysis notebook is available in ML Project For UNI.ipynb — includes EDA, preprocessing, model training, evaluation, and comparison for all 4 models.
+
+---
+
+## 🚀 Run Locally
+
+git clone https://github.com/zyadragab/Student-Grade-Predictor
+cd Student-Grade-Predictor
 pip install -r requirements.txt
-
-# 2. شغّل الـ app
 streamlit run app.py
-```
-
-سيفتح تلقائياً على: `http://localhost:8501`
 
 ---
 
-## 🌐 Deploy على Streamlit Cloud (لينك مجاني دائم)
+## 📁 Project Structure
 
-### الخطوات:
-
-**1. ارفع الملفات على GitHub**
-- اعمل repo جديد على github.com
-- ارفع: `app.py` + `requirements.txt` + `student_data.csv`
-
-**2. اتصل بـ Streamlit Cloud**
-- روح على: https://share.streamlit.io
-- سجّل دخول بحسابك على GitHub
-- اضغط **"New app"**
-
-**3. اختار الـ repo**
-- Repository: اسم الـ repo بتاعك
-- Branch: `main`
-- Main file path: `app.py`
-- اضغط **"Deploy!"**
-
-✅ بعد دقيقتين هيديك لينك زي:
-`https://your-name-grade-predictor.streamlit.app`
-
----
-
-## 📄 صفحات الـ App
-
-| الصفحة | المحتوى |
-|--------|---------|
-| 🏠 Overview | نظرة عامة على الداتا والموديلز |
-| 📊 Model Comparison | مقارنة RMSE / MAE / R² للـ 4 موديلز |
-| 🔮 Predict Grade | ادخل بيانات طالب واتوقع الدرجة |
-| 📈 Feature Importance | أهم الـ features في Random Forest و XGBoost |
-
----
-
-## ⚠️ ملاحظة على الـ Free Tier
-
-الـ app بيتـ"sleep" لو مفيش حد بيستخدمه لفترة،
-بس بيصحى تاني لما حد يفتحه (بياخد ~30 ثانية).
+├── app.py                       # Main Streamlit app
+├── ML Project For UNI.ipynb     # Full training notebook
+├── requirements.txt             # Dependencies
+├── student_data.csv             # Dataset
+├── models/                      # Saved trained models
+│   ├── lr.pkl
+│   ├── rf.pkl
+│   ├── svr.pkl
+│   ├── xgb.pkl
+│   └── scaler.pkl
+└── README.md
